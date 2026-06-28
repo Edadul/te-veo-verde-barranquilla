@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { CalendarDays, Clock, MapPin, Camera, TreeDeciduous } from "lucide-react"
 import { evento } from "@/lib/contenido"
+import { withBasePath } from "@/lib/utils"
 
 export function HeroEvento() {
   return (
@@ -60,7 +61,7 @@ export function HeroEvento() {
           <div className="absolute -inset-3 -rotate-2 rounded-3xl bg-secondary" aria-hidden="true" />
           <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl">
             <Image
-              src="/flyer-te-veo-verde.png"
+              src={withBasePath("/flyer-te-veo-verde.png")}
               alt="Flyer del evento Te Veo Verde Barranquilla en la Ciénaga de Mallorquín, 03 de julio a las 8:00 AM"
               width={1080}
               height={1350}

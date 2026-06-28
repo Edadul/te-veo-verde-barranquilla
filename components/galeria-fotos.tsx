@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { galeria } from "@/lib/contenido"
+import { withBasePath } from "@/lib/utils"
 
 export function GaleriaFotos() {
   return (
@@ -25,7 +26,7 @@ export function GaleriaFotos() {
               className="group relative overflow-hidden rounded-2xl border border-border bg-card break-inside-avoid"
             >
               <Image
-                src={foto.src || "/placeholder.svg"}
+                src={withBasePath(foto.src || "/placeholder.svg")}
                 alt={foto.alt}
                 width={800}
                 height={i % 2 === 0 ? 1000 : 600}

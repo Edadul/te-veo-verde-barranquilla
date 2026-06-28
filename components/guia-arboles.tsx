@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { arboles } from "@/lib/contenido"
+import { withBasePath } from "@/lib/utils"
 
 export function GuiaArboles() {
   return (
@@ -27,7 +28,7 @@ export function GuiaArboles() {
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <Image
-                  src={arbol.imagen || "/placeholder.svg"}
+                  src={withBasePath(arbol.imagen || "/placeholder.svg")}
                   alt={`${arbol.nombre} (${arbol.cientifico})`}
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
