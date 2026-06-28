@@ -1,6 +1,7 @@
 // Enlace al formulario de inscripción.
 // Reemplaza este valor con el link real (Google Forms, Typeform, etc.).
-export const FORM_INSCRIPCION_URL = "" // p. ej. "https://forms.gle/tu-formulario"
+export const FORM_INSCRIPCION_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSebyv2ZoGQYci5vzYdRg3w4_WJluRr64J4sVHhOkQq1iUvzXQ/viewform?usp=dialog"; // p. ej. "https://forms.gle/tu-formulario"
 
 export const evento = {
   titulo: "Te Veo Verde",
@@ -10,15 +11,15 @@ export const evento = {
   lugar: "Ciénaga de Mallorquín",
   descripcion:
     "Una mañana para reconectar con la naturaleza: caminaremos por los senderos de la Ciénaga de Mallorquín, fotografiaremos sus manglares y aprenderemos a cuidarlos. Cada participante podrá adoptar un árbol del manglar y darle seguimiento.",
-}
+};
 
 export type Arbol = {
-  nombre: string
-  cientifico: string
-  imagen: string
-  descripcion: string
-  datos: { etiqueta: string; valor: string }[]
-}
+  nombre: string;
+  cientifico: string;
+  imagen: string;
+  descripcion: string;
+  datos: { etiqueta: string; valor: string }[];
+};
 
 export const arboles: Arbol[] = [
   {
@@ -73,13 +74,25 @@ export const arboles: Arbol[] = [
       { etiqueta: "Rol", valor: "Frena la erosión" },
     ],
   },
-]
+];
 
 export const galeria = [
   { src: "/galeria/sendero.png", alt: "Sendero de madera entre los manglares" },
   { src: "/galeria/aves.png", alt: "Garzas en la ciénaga" },
-  { src: "/galeria/atardecer.png", alt: "Atardecer sobre la Ciénaga de Mallorquín" },
-  { src: "/galeria/raices.png", alt: "Raíces del mangle rojo reflejadas en el agua" },
-  { src: "/galeria/visitantes.png", alt: "Visitantes fotografiando el manglar" },
-  { src: "/galeria/plantula.png", alt: "Plántula de mangle lista para sembrar" },
-]
+  {
+    src: "/galeria/atardecer.png",
+    alt: "Atardecer sobre la Ciénaga de Mallorquín",
+  },
+  {
+    src: "/galeria/raices.png",
+    alt: "Raíces del mangle rojo reflejadas en el agua",
+  },
+  {
+    src: "/galeria/visitantes.png",
+    alt: "Visitantes fotografiando el manglar",
+  },
+  {
+    src: "/galeria/plantula.png",
+    alt: "Plántula de mangle lista para sembrar",
+  },
+];
