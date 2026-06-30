@@ -1,9 +1,9 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Camera, TreeDeciduous } from "lucide-react"
+import { ArrowRight, Camera, TreeDeciduous } from "lucide-react"
 import { evento } from "@/lib/contenido"
 import { withBasePath } from "@/lib/utils"
-import { DiafragmaAnimado } from "@/components/decor/diafragma-animado"
+import { HojaAnimada } from "@/components/decor/hoja-animada"
 import { TicketEvento } from "@/components/ticket-evento"
 
 export function HeroEvento() {
@@ -13,7 +13,7 @@ export function HeroEvento() {
         {/* Texto */}
         <div id="evento" className="scroll-mt-24">
           <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-widest text-secondary-foreground">
-            <DiafragmaAnimado size={14} />
+            <HojaAnimada size={14} />
             Conecta con la naturaleza
           </span>
 
@@ -31,9 +31,10 @@ export function HeroEvento() {
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
               href="#inscripcion"
-              className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30"
             >
               Inscríbete al recorrido
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
             </a>
             <Link
               href="/guia"

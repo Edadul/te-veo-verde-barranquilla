@@ -27,10 +27,10 @@ export function Inscripcion() {
             href={FORM_INSCRIPCION_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-sm font-semibold text-primary transition-opacity hover:opacity-90"
+            className="group inline-flex items-center gap-2 rounded-full bg-background px-7 py-3.5 text-sm font-semibold text-primary shadow-lg shadow-black/10 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-black/15"
           >
             Ir al formulario de inscripción
-            <ArrowRight className="size-4" aria-hidden="true" />
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
           </a>
         </div>
       </div>

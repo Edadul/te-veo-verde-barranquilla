@@ -1,15 +1,21 @@
 import { CalendarioAnimado } from "@/components/decor/calendario-animado"
 import { RelojAnimado } from "@/components/decor/reloj-animado"
 import { PinAnimado } from "@/components/decor/pin-animado"
+import { HojaAnimada } from "@/components/decor/hoja-animada"
 import { evento, calendario } from "@/lib/contenido"
 import { withBasePath } from "@/lib/utils"
 
 export function TicketEvento({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`relative -rotate-1 rounded-2xl border border-border bg-card shadow-sm transition-transform hover:rotate-0 ${className}`}
+      className={`relative -rotate-1 overflow-hidden rounded-2xl border border-border bg-card shadow-xl shadow-foreground/10 transition-transform hover:rotate-0 ${className}`}
     >
-      <div className="grid sm:grid-cols-[1fr_auto_1fr]">
+      <HojaAnimada
+        size={120}
+        className="pointer-events-none absolute -bottom-6 -right-6 text-primary/6"
+      />
+
+      <div className="relative grid sm:grid-cols-[1fr_auto_1fr]">
         <div className="p-5">
           <div className="flex items-center gap-2 text-muted-foreground">
             <CalendarioAnimado size={18} className="text-primary" />
@@ -23,13 +29,24 @@ export function TicketEvento({ className = "" }: { className?: string }) {
         </div>
 
         <div className="relative mx-5 border-t border-dashed border-border sm:mx-0 sm:border-l sm:border-t-0">
+          {/* muescas que simulan el boleto perforado */}
+          {/* móvil: extremos izquierdo/derecho de la línea horizontal */}
           <span
             aria-hidden="true"
-            className="absolute -left-[7px] -top-[7px] size-3.5 rounded-full bg-background max-sm:hidden"
+            className="absolute left-0 top-0 size-3.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-background sm:hidden"
           />
           <span
             aria-hidden="true"
-            className="absolute -bottom-[7px] -left-[7px] size-3.5 rounded-full bg-background max-sm:hidden"
+            className="absolute right-0 top-0 size-3.5 -translate-y-1/2 translate-x-1/2 rounded-full bg-background sm:hidden"
+          />
+          {/* escritorio: extremos arriba/abajo de la línea vertical */}
+          <span
+            aria-hidden="true"
+            className="absolute -left-1.75 -top-1.75 hidden size-3.5 rounded-full bg-background sm:block"
+          />
+          <span
+            aria-hidden="true"
+            className="absolute -bottom-1.75 -left-1.75 hidden size-3.5 rounded-full bg-background sm:block"
           />
         </div>
 
@@ -45,7 +62,7 @@ export function TicketEvento({ className = "" }: { className?: string }) {
               href={calendario.googleUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
             >
               <CalendarioAnimado size={14} />
               Agregar al calendario

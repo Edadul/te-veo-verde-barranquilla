@@ -207,14 +207,14 @@
   }
 }
 
-/* Diafragma animado: motivo de marca (cámara) reutilizado en las etiquetas de sección */
-@keyframes diafragma-aspa {
+/* Hoja animada: motivo de marca (mismo trazo que el logo) reutilizado en las etiquetas de sección */
+@keyframes hoja-vaiven {
   0%,
   100% {
-    transform: rotate(0deg) scale(1);
+    transform: rotate(-6deg);
   }
   50% {
-    transform: rotate(9deg) scale(0.9);
+    transform: rotate(6deg);
   }
 }
 
@@ -258,8 +258,9 @@
  * sin importar la media query. Así sí se respeta prefers-reduced-motion.
  */
 @media (prefers-reduced-motion: no-preference) {
-  .anim-diafragma-aspa {
-    animation-name: diafragma-aspa;
+  .anim-hoja-vaiven {
+    animation-name: hoja-vaiven;
+    animation-duration: 3.2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   }
