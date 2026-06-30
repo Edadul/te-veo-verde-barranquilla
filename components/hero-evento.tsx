@@ -6,16 +6,19 @@ import { withBasePath } from "@/lib/utils"
 import { HojaAnimada } from "@/components/decor/hoja-animada"
 import { TicketEvento } from "@/components/ticket-evento"
 import { CompartirEvento } from "@/components/compartir-evento"
+import { FaunaFlotante } from "@/components/decor/fauna-flotante"
+import { TituloOnda } from "@/components/titulo-onda"
 
 export function HeroEvento() {
   return (
     <section id="inicio" className="relative overflow-hidden">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 md:grid-cols-2 md:px-6 md:py-20">
+      <FaunaFlotante variante="mixto" />
+      <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 md:grid-cols-2 md:px-6 md:py-20">
         {/* Texto */}
         <div id="evento" className="scroll-mt-24">
-          <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-widest text-secondary-foreground">
-            <HojaAnimada size={14} />
-            Conecta con la naturaleza
+          <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1.5 font-script text-lg text-secondary-foreground">
+            <HojaAnimada size={16} />
+            <TituloOnda>Conecta con la naturaleza</TituloOnda>
           </span>
 
           <h1 className="mt-5 font-heading text-5xl leading-[0.92] tracking-tight text-foreground sm:text-6xl md:text-7xl">
@@ -69,8 +72,8 @@ export function HeroEvento() {
               priority
               className="h-auto w-full"
             />
+            <CompartirEvento />
           </div>
-          <CompartirEvento className="relative mt-4" />
         </div>
       </div>
     </section>

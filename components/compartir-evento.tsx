@@ -8,7 +8,7 @@ const TITULO = "Te Veo Verde Barranquilla"
 const TEXTO =
   "Te invito a Te Veo Verde Barranquilla: un recorrido fotográfico y de conservación en la Ciénaga de Mallorquín, el 3 de julio. ¡Acompáñame!"
 
-export function CompartirEvento({ className = "" }: { className?: string }) {
+export function CompartirEvento() {
   const [copiado, setCopiado] = useState(false)
 
   async function compartir() {
@@ -19,7 +19,6 @@ export function CompartirEvento({ className = "" }: { className?: string }) {
       const respuesta = await fetch(withBasePath("/flyer-te-veo-verde.png"))
       const blob = await respuesta.blob()
       const archivo = new File([blob], "te-veo-verde-barranquilla.png", { type: blob.type })
-
       if (navigator.canShare?.({ files: [archivo] })) {
         await navigator.share({ title: TITULO, text: TEXTO, url, files: [archivo] })
         return
@@ -33,7 +32,7 @@ export function CompartirEvento({ className = "" }: { className?: string }) {
         await navigator.share({ title: TITULO, text: TEXTO, url })
         return
       } catch {
-        // el usuario canceló el share o el navegador lo rechazó; seguimos al respaldo
+        // el usuario canceló
       }
     }
 
@@ -42,24 +41,26 @@ export function CompartirEvento({ className = "" }: { className?: string }) {
       setCopiado(true)
       setTimeout(() => setCopiado(false), 2000)
     } catch {
-      // sin permiso de portapapeles: no hay más respaldo disponible
+      // sin permiso de portapapeles
     }
   }
 
   return (
-    <div className={`flex items-center justify-center gap-3 ${className}`}>
-      <p className="text-sm text-muted-foreground">Invita a un amigo a este recorrido</p>
+    <div className="flex items-center justify-between gap-3 border-t border-border bg-card px-4 py-3">
+      <p className="text-xs text-muted-foreground">
+        {copiado ? "¡Enlace listo para pegar!" : "Invita a un amigo a este recorrido"}
+      </p>
       <button
         type="button"
         onClick={compartir}
-        className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+        className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
       >
         {copiado ? (
           <Check className="size-3.5" aria-hidden="true" />
         ) : (
           <Share2 className="size-3.5" aria-hidden="true" />
         )}
-        {copiado ? "¡Enlace copiado!" : "Compartir invitación"}
+        {copiado ? "¡Copiado!" : "Compartir"}
       </button>
     </div>
   )
