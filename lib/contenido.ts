@@ -62,10 +62,10 @@ export const resumenCienaga = {
   definicion:
     "Es una laguna costera donde el agua dulce del río Magdalena se mezcla con el agua salada del mar Caribe, formando lo que se conoce como agua salobre.",
   estadisticas: [
-    { valor: "42", etiqueta: "especies de peces registradas" },
-    { valor: "24", etiqueta: "familias de peces" },
-    { valor: "155", etiqueta: "especies de aves registradas" },
-    { valor: "4.5 km", etiqueta: "de senderos elevados en el ecoparque" },
+    { valor: "42", etiqueta: "especies de peces registradas", icono: "pez" as const },
+    { valor: "24", etiqueta: "familias de peces", icono: "pez" as const },
+    { valor: "155", etiqueta: "especies de aves registradas", icono: "ave" as const },
+    { valor: "4.5 km", etiqueta: "de senderos elevados en el ecoparque", icono: "sendero" as const },
   ],
   fuente:
     "Arrieta & de la Rosa (2003), Bol. Invest. Mar. Cost. 32(1), INVEMAR · Ecoparque Ciénaga de Mallorquín",

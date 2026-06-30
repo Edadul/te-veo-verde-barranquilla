@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import type { Metadata, Viewport } from "next";
-import { Geist, Anton } from "next/font/google";
+import { Geist, Anton, Caveat } from "next/font/google";
 import "./globals.css";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
@@ -10,6 +10,11 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const anton = Anton({
   variable: "--font-anton",
   weight: "400",
+  subsets: ["latin"],
+});
+const caveat = Caveat({
+  variable: "--font-caveat",
+  weight: ["600", "700"],
   subsets: ["latin"],
 });
 
@@ -47,7 +52,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`light ${geistSans.variable} ${anton.variable} bg-background`}
+      className={`light ${geistSans.variable} ${anton.variable} ${caveat.variable} bg-background`}
     >
       <body className="font-sans antialiased">
         {children}

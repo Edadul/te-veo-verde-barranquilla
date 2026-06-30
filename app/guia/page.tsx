@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Bird, Fish, Footprints } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { EspecieCard } from "@/components/especie-card"
@@ -21,6 +21,12 @@ export const metadata: Metadata = {
   description:
     "Árboles de mangle, peces y fauna de la Ciénaga de Mallorquín: guía de campo para el recorrido de Te Veo Verde Barranquilla.",
 }
+
+const iconoPorEstadistica = {
+  pez: Fish,
+  ave: Bird,
+  sendero: Footprints,
+} as const
 
 const gruposPeces: GrupoPez[] = ["Residentes", "Visitantes frecuentes", "Visitas ocasionales"]
 
@@ -54,15 +60,21 @@ export default function GuiaPage() {
               {resumenCienaga.definicion}
             </p>
 
-            <dl className="mx-auto mt-8 max-w-2xl overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-              <div className="grid grid-cols-2 divide-x divide-y divide-border sm:grid-cols-4 sm:divide-y-0">
-                {resumenCienaga.estadisticas.map((stat) => (
-                  <div key={stat.etiqueta} className="p-4">
+            <dl className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-x-3 gap-y-6 rounded-2xl border border-border bg-card px-4 pb-5 pt-4 shadow-sm sm:grid-cols-4 sm:divide-x sm:divide-border">
+              {resumenCienaga.estadisticas.map((stat) => {
+                const Icono = iconoPorEstadistica[stat.icono]
+                return (
+                  <div key={stat.etiqueta} className="px-1 text-center sm:px-3">
                     <dt className="font-heading text-2xl text-primary">{stat.valor}</dt>
-                    <dd className="mt-1 text-xs leading-snug text-muted-foreground">{stat.etiqueta}</dd>
+                    <div className="relative my-5 border-t border-border">
+                      <span className="absolute left-1/2 top-0 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-card shadow-sm">
+                        <Icono className="size-4 text-primary" aria-hidden="true" />
+                      </span>
+                    </div>
+                    <dd className="text-xs leading-snug text-muted-foreground">{stat.etiqueta}</dd>
                   </div>
-                ))}
-              </div>
+                )
+              })}
             </dl>
             <p className="mt-4 text-[11px] text-muted-foreground/70">Fuente: {resumenCienaga.fuente}</p>
           </div>

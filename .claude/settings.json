@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/dubalaguilar -maxdepth 2 \\\\\\( -iname \"*.png\" -o -iname \"*.jpg\" -o -iname \"*.jpeg\" \\\\\\) -mmin -1 2>/dev/null | grep -v node_modules)",
+      "Read(//Users/dubalaguilar/**)"
+    ]
+  }
+}

@@ -5,6 +5,7 @@ import { evento } from "@/lib/contenido"
 import { withBasePath } from "@/lib/utils"
 import { HojaAnimada } from "@/components/decor/hoja-animada"
 import { TicketEvento } from "@/components/ticket-evento"
+import { CompartirEvento } from "@/components/compartir-evento"
 
 export function HeroEvento() {
   return (
@@ -69,6 +70,7 @@ export function HeroEvento() {
               className="h-auto w-full"
             />
           </div>
+          <CompartirEvento className="relative mt-4" />
         </div>
       </div>
     </section>

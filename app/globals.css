@@ -9,6 +9,7 @@
 @theme inline {
   --font-heading: var(--font-anton), 'Geist Fallback';
   --font-display: var(--font-anton), 'Geist Fallback';
+  --font-script: var(--font-caveat), cursive;
   --font-sans: var(--font-geist-sans), 'Geist Fallback';
   --font-mono: var(--font-geist-mono), 'Geist Mono Fallback';
   --color-sidebar-ring: var(--sidebar-ring);
@@ -251,6 +252,17 @@
   }
 }
 
+/* Efecto ola: cada letra de un título secundario sube y baja con un leve desfase */
+@keyframes onda-letra {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.12em);
+  }
+}
+
 /*
  * El nombre de la animación se asigna solo dentro de esta media query, en vez
  * de vía `style={{ animation: ... }}`, porque un estilo inline siempre le
@@ -271,6 +283,12 @@
   }
   .anim-calendario-resalte {
     animation-name: calendario-resalte;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .anim-onda-letra {
+    animation-name: onda-letra;
+    animation-duration: 2.2s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   }
