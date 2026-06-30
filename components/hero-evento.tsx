@@ -1,7 +1,10 @@
 import Image from "next/image"
-import { CalendarDays, Clock, MapPin, Camera, TreeDeciduous } from "lucide-react"
+import Link from "next/link"
+import { Camera, TreeDeciduous } from "lucide-react"
 import { evento } from "@/lib/contenido"
 import { withBasePath } from "@/lib/utils"
+import { DiafragmaAnimado } from "@/components/decor/diafragma-animado"
+import { TicketEvento } from "@/components/ticket-evento"
 
 export function HeroEvento() {
   return (
@@ -10,7 +13,7 @@ export function HeroEvento() {
         {/* Texto */}
         <div id="evento" className="scroll-mt-24">
           <span className="inline-flex items-center gap-2 rounded-full bg-secondary px-3 py-1 text-xs font-semibold uppercase tracking-widest text-secondary-foreground">
-            <span className="size-1.5 rounded-full bg-accent" aria-hidden="true" />
+            <DiafragmaAnimado size={14} />
             Conecta con la naturaleza
           </span>
 
@@ -23,11 +26,7 @@ export function HeroEvento() {
             {evento.descripcion}
           </p>
 
-          <dl className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <InfoItem icon={CalendarDays} label="Fecha" value={evento.fecha} />
-            <InfoItem icon={Clock} label="Hora" value={evento.hora} />
-            <InfoItem icon={MapPin} label="Lugar" value={evento.lugar} />
-          </dl>
+          <TicketEvento className="mt-8" />
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
@@ -36,12 +35,12 @@ export function HeroEvento() {
             >
               Inscríbete al recorrido
             </a>
-            <a
-              href="#guia"
+            <Link
+              href="/guia"
               className="rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
             >
-              Conoce los árboles
-            </a>
+              Conoce la ciénaga
+            </Link>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
@@ -72,23 +71,5 @@ export function HeroEvento() {
         </div>
       </div>
     </section>
-  )
-}
-
-function InfoItem({
-  icon: Icon,
-  label,
-  value,
-}: {
-  icon: React.ComponentType<{ className?: string }>
-  label: string
-  value: string
-}) {
-  return (
-    <div className="rounded-xl border border-border bg-card p-4">
-      <Icon className="size-5 text-primary" aria-hidden="true" />
-      <dt className="mt-2 text-xs uppercase tracking-wide text-muted-foreground">{label}</dt>
-      <dd className="font-medium text-foreground">{value}</dd>
-    </div>
   )
 }

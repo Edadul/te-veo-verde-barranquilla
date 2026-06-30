@@ -1,15 +1,15 @@
 import Image from "next/image"
 import { galeria } from "@/lib/contenido"
 import { withBasePath } from "@/lib/utils"
+import { EtiquetaSeccion } from "@/components/etiqueta-seccion"
+import { InstagramCta } from "@/components/instagram-cta"
 
 export function GaleriaFotos() {
   return (
     <section id="galeria" className="scroll-mt-20 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="max-w-2xl">
-          <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-            Galería
-          </span>
+          <EtiquetaSeccion>Galería</EtiquetaSeccion>
           <h2 className="mt-2 text-balance font-heading text-4xl tracking-tight text-foreground md:text-5xl">
             Capturado en la ciénaga
           </h2>
@@ -39,6 +39,8 @@ export function GaleriaFotos() {
             </figure>
           ))}
         </div>
+
+        <InstagramCta />
       </div>
     </section>
   )

@@ -1,6 +1,6 @@
 import { SiteHeader } from "@/components/site-header"
 import { HeroEvento } from "@/components/hero-evento"
-import { GuiaArboles } from "@/components/guia-arboles"
+import { GuiaTeaser } from "@/components/guia-teaser"
 import { GaleriaFotos } from "@/components/galeria-fotos"
 import { Inscripcion } from "@/components/inscripcion"
 import { SiteFooter } from "@/components/site-footer"
@@ -11,7 +11,7 @@ export default function Page() {
       <SiteHeader />
       <main>
         <HeroEvento />
-        <GuiaArboles />
+        <GuiaTeaser />
         <GaleriaFotos />
         <Inscripcion />
       </main>

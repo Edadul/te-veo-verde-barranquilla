@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   generator: "v0.app",
   icons: {
     icon: [
+      { url: withBasePath("/icon-light-32x32.png"), sizes: "32x32" },
       {
         url: withBasePath("/icon-light-32x32.png"),
         media: "(prefers-color-scheme: light)",
@@ -27,10 +28,6 @@ export const metadata: Metadata = {
       {
         url: withBasePath("/icon-dark-32x32.png"),
         media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: withBasePath("/icon.svg"),
-        type: "image/svg+xml",
       },
     ],
     apple: withBasePath("/apple-icon.png"),

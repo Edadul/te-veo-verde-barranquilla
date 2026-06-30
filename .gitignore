@@ -14,3 +14,8 @@ node_modules
 .next/
 out/
 .DS_Store
+tsconfig.tsbuildinfo
+
+# Fotos sin optimizar (ver assets/fotos-pendientes/LEEME.md)
+assets/fotos-pendientes/*
+!assets/fotos-pendientes/LEEME.md

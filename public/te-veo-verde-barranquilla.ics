@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Te Veo Verde Barranquilla//Evento//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:te-veo-verde-barranquilla-2026@teveoverdebarranquilla
+DTSTAMP:20260628T000000Z
+DTSTART:20260703T130000Z
+DTEND:20260703T160000Z
+SUMMARY:Te Veo Verde Barranquilla
+DESCRIPTION:Recorrido fotográfico y de conservación en la Ciénaga de Mallorquín. Trae tu cámara y adopta un árbol de manglar.
+LOCATION:Ciénaga de Mallorquín\, Barranquilla
+END:VEVENT
+END:VCALENDAR

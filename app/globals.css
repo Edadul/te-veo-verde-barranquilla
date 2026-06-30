@@ -170,3 +170,107 @@
     @apply font-sans;
   }
 }
+
+/* Siluetas flotantes: animación decorativa de la guía de la ciénaga */
+@keyframes drift-x {
+  from {
+    left: -8%;
+  }
+  to {
+    left: 108%;
+  }
+}
+
+@keyframes drift-bob {
+  0%,
+  100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes drift-leaf {
+  0% {
+    left: -6%;
+    top: var(--leaf-top-inicio);
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    left: 106%;
+    top: var(--leaf-top-fin);
+    transform: rotate(-4deg);
+  }
+}
+
+/* Diafragma animado: motivo de marca (cámara) reutilizado en las etiquetas de sección */
+@keyframes diafragma-aspa {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(9deg) scale(0.9);
+  }
+}
+
+/* Íconos dinámicos del ticket de evento (fecha, hora, lugar) */
+@keyframes reloj-tic {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pin-pulso {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.45;
+  }
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+@keyframes calendario-resalte {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.4);
+  }
+}
+
+/*
+ * El nombre de la animación se asigna solo dentro de esta media query, en vez
+ * de vía `style={{ animation: ... }}`, porque un estilo inline siempre le
+ * gana en especificidad a una clase de Tailwind como `motion-reduce:[...]`,
+ * sin importar la media query. Así sí se respeta prefers-reduced-motion.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .anim-diafragma-aspa {
+    animation-name: diafragma-aspa;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  .anim-reloj-tic {
+    animation-name: reloj-tic;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .anim-calendario-resalte {
+    animation-name: calendario-resalte;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+}
