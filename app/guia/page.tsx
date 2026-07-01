@@ -44,7 +44,7 @@ export default function GuiaPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
-        <section className="relative overflow-hidden border-b border-border py-14 md:py-20">
+        <section className="relative overflow-hidden py-14 md:py-20">
           <HeroParallax
             src={withBasePath("/galeria/hereoguia.jpg")}
             overlay="bg-background/82"

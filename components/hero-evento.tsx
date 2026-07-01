@@ -61,6 +61,7 @@ export function HeroEvento() {
               Adopta un árbol del manglar
             </span>
           </div>
+
         </div>
 
         {/* Flyer */}
