@@ -77,7 +77,7 @@ export const arboles: Especie[] = [
     nombre: "Mangle Rojo",
     cientifico: "Rhizophora mangle",
     categoria: "arbol",
-    imagen: "/guia/mangle-rojo.png",
+    imagen: "/guia/mangle-rojo.webp",
     descripcion:
       "Reconocible por sus raíces aéreas en forma de zancos que se hunden en el agua. Es la primera línea de defensa de la costa: estabiliza el suelo y sirve de refugio para peces y crustáceos.",
     datos: [
@@ -91,7 +91,7 @@ export const arboles: Especie[] = [
     nombre: "Mangle Negro",
     cientifico: "Avicennia germinans",
     categoria: "arbol",
-    imagen: "/guia/mangle-negro.png",
+    imagen: "/guia/mangle-negro.webp",
     descripcion:
       "Crece detrás del mangle rojo y se distingue por los neumatóforos: pequeñas raíces que sobresalen del lodo como lápices para respirar. Excreta sal por sus hojas.",
     datos: [
@@ -105,7 +105,7 @@ export const arboles: Especie[] = [
     nombre: "Mangle Blanco",
     cientifico: "Laguncularia racemosa",
     categoria: "arbol",
-    imagen: "/guia/mangle-blanco.png",
+    imagen: "/guia/mangle-blanco.webp",
     descripcion:
       "De hojas redondeadas y verde claro, suele ubicarse en zonas más altas y secas. Sus glándulas en el peciolo segregan azúcar y atraen a numerosos insectos polinizadores.",
     datos: [
@@ -119,7 +119,7 @@ export const arboles: Especie[] = [
     nombre: "Mangle Botoncillo",
     cientifico: "Conocarpus erectus",
     categoria: "arbol",
-    imagen: "/guia/mangle-botoncillo.png",
+    imagen: "/guia/mangle-botoncillo.webp",
     descripcion:
       "El más terrestre del grupo. Tiene corteza rugosa y frutos pequeños en forma de botón. Marca la transición entre el manglar y la tierra firme, protegiendo del viento y la erosión.",
     datos: [
@@ -431,6 +431,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Garceta grande",
     cientifico: "Ardea alba",
     categoria: "ave",
+    imagen: "/guia/garceta-grande.webp",
     estado: "Residente frecuente",
     descripcion:
       "La garza más visible de la ciénaga: aparece en el 80 % de los avistamientos registrados en eBird. Caza inmóvil en aguas someras con una explosiva estocada del cuello, y es uno de los mejores sujetos fotográficos del recorrido.",
@@ -446,6 +447,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Garceta nívea",
     cientifico: "Egretta thula",
     categoria: "ave",
+    imagen: "/guia/garceta-nivea.webp",
     estado: "Residente frecuente",
     descripcion:
       "Garza blanca de patas negras con pies amarillos brillantes —su marca de campo—. Revuelve el fango con los pies para espantar presas y las atrapa con relámpagos del pico. Segunda especie más avistada con el 77.5 % de las listas.",
@@ -461,6 +463,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Pelícano pardo",
     cientifico: "Pelecanus occidentalis",
     categoria: "ave",
+    imagen: "/guia/pelicano-pardo.webp",
     estado: "Residente frecuente",
     descripcion:
       "Ícono del litoral caribeño: pesca en picado desde varios metros de altura, hundiéndose con las alas plegadas y atrapando peces en su bolsa gular elástica. Presente en el 70 % de las listas de eBird en la ciénaga.",
@@ -476,6 +479,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Cormorán neotropical",
     cientifico: "Nannopterum brasilianum",
     categoria: "ave",
+    imagen: "/guia/cormoran-neotropical.webp",
     estado: "Residente frecuente",
     descripcion:
       "Se posa con las alas abiertas sobre troncos emergidos para secar su plumaje: no tiene glándulas impermeabilizantes y el agua empapa sus plumas. Buceador ágil, alcanza el 67.5 % de aparición en eBird.",
@@ -491,6 +495,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Martín pescador grande",
     cientifico: "Megaceryle torquata",
     categoria: "ave",
+    imagen: "/guia/martin-pescador.webp",
     estado: "Residente",
     descripcion:
       "El más grande y vistoso de los martines pescadores del Caribe. Vigila desde una rama sobre el agua y se lanza en picado con precisión quirúrgica. El macho tiene el pecho rufo; la hembra añade una banda azul.",
@@ -506,6 +511,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Fragata magnífica",
     cientifico: "Fregata magnificens",
     categoria: "ave",
+    imagen: "/guia/fragata-magnifica.webp",
     estado: "Visitante costero",
     descripcion:
       "Ave de largas alas en «W» que planea sin esfuerzo durante horas. Experta en robar presas a otras aves en vuelo (cleptoparásita). En temporada de cría el macho infla una bolsa gular de color rojo intenso.",
@@ -521,6 +527,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Flamenco rosado",
     cientifico: "Phoenicopterus ruber",
     categoria: "ave",
+    imagen: "/guia/flamenco-rosado.webp",
     estado: "Visitante ocasional",
     descripcion:
       "El más colorido visitante de la ciénaga. Su color rosa proviene de los carotenoides de los crustáceos y algas que filtra con su peculiar pico curvado. Se avista en grupos en épocas secas, cuando migra por la costa caribeña.",
@@ -536,6 +543,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Águila pescadora",
     cientifico: "Pandion haliaetus",
     categoria: "ave",
+    imagen: "/guia/aguila-pescadora.webp",
     estado: "Migratorio",
     descripcion:
       "Rapaz migratoria que visita la ciénaga desde Norteamérica entre octubre y marzo. Especializada en capturar peces: sus dedos exteriores reversibles y garras largas le permiten asir presas resbaladizas justo bajo la superficie.",
@@ -552,6 +560,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Nutria neotropical",
     cientifico: "Lontra longicaudis",
     categoria: "mamifero",
+    imagen: "/guia/nutria-neotropical.webp",
     estado: "Amenazada localmente",
     descripcion:
       "Uno de los mamíferos más carismáticos de los manglares. Nada con agilidad y captura peces y cangrejos. Su presencia indica buena calidad del agua; la contaminación y la caza la han reducido en gran parte de su área histórica.",
@@ -567,6 +576,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Mapache cangrejero",
     cientifico: "Procyon cancrivorus",
     categoria: "mamifero",
+    imagen: "/guia/mapache-cangrejero.webp",
     estado: "Residente",
     descripcion:
       "Pariente del mapache común adaptado a manglares y riberas. Busca cangrejos, moluscos y peces explorando el fango con sus ágiles manos. Activo principalmente de noche, es raro observarlo durante el recorrido diurno.",
@@ -583,6 +593,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Babilla",
     cientifico: "Caiman crocodilus fuscus",
     categoria: "reptil",
+    imagen: "/guia/babilla.webp",
     estado: "Residente",
     descripcion:
       "Cocodrilo pequeño que habita canales y zonas tranquilas de la ciénaga. Regula la población de peces y contribuye a la salud del ecosistema. A pesar de su apariencia temible es relativamente tímido con los humanos.",
@@ -598,6 +609,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Iguana verde",
     cientifico: "Iguana iguana",
     categoria: "reptil",
+    imagen: "/guia/iguana-verde.webp",
     estado: "Residente",
     descripcion:
       "Reptil herbívoro que reposa en las ramas de los manglares calentándose al sol. Las crías son verde brillante; los adultos se tornan más grises con tonos anaranjados. Excelente nadadora: se lanza al agua cuando se siente amenazada.",
@@ -613,6 +625,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Boa",
     cientifico: "Boa imperator",
     categoria: "reptil",
+    imagen: "/guia/boa.webp",
     estado: "Residente",
     descripcion:
       "La serpiente más grande del área, constrictora y no venenosa. Habita la vegetación ribereña y controla poblaciones de roedores. Su presencia es señal de un ecosistema relativamente sano. Activa al amanecer y al atardecer.",
@@ -629,6 +642,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Ostra del mangle",
     cientifico: "Crassostrea rhizophorae",
     categoria: "molusco",
+    imagen: "/guia/ostra-mangle.webp",
     estado: "Recurso pesquero",
     descripcion:
       "Se adhiere a las raíces sumergidas del mangle rojo formando racimos visibles desde el sendero. Filtra el agua de la ciénaga mejorando su calidad. Recurso tradicional de las comunidades pesqueras locales de Mallorquín.",
@@ -645,6 +659,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Cangrejo rojo del mangle",
     cientifico: "Goniopsis cruentata",
     categoria: "crustaceo",
+    imagen: "/guia/cangrejo-rojo.webp",
     estado: "Residente",
     descripcion:
       "El habitante más llamativo de las raíces del manglar: trepador ágil de caparazón rojo intenso con patas moteadas. Se le ve escabullirse por los zancos del mangle rojo durante el recorrido y es uno de los primeros animales que notan los visitantes.",
@@ -660,6 +675,7 @@ export const faunaDestacada: Especie[] = [
     nombre: "Cangrejo azul del manglar",
     cientifico: "Cardisoma guanhumi",
     categoria: "crustaceo",
+    imagen: "/guia/cangrejo-azul.webp",
     estado: "Residente",
     descripcion:
       "Cangrejo terrestre de gran tamaño que excava madrigueras en los bordes del manglar. El macho tiene una de sus pinzas notablemente más grande. Especie de interés pesquero artesanal para las comunidades de Mallorquín.",
