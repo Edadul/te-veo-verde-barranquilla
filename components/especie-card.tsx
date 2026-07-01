@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Bird, Fish, Leaf, PawPrint, Shell, Turtle } from "lucide-react"
+import { Bird, Fish, Leaf, PawPrint, Shell, Shrimp, Turtle } from "lucide-react"
 import { withBasePath } from "@/lib/utils"
 import type { Especie } from "@/lib/contenido"
 
@@ -10,6 +10,7 @@ const iconoPorCategoria = {
   mamifero: PawPrint,
   reptil: Turtle,
   molusco: Shell,
+  crustaceo: Shrimp,
 } as const
 
 export function EspecieCard({

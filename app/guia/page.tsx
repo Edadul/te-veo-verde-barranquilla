@@ -36,6 +36,7 @@ const gruposFauna: { categoria: Categoria; titulo: string }[] = [
   { categoria: "ave", titulo: "Aves" },
   { categoria: "mamifero", titulo: "Mamíferos" },
   { categoria: "reptil", titulo: "Reptiles" },
+  { categoria: "crustaceo", titulo: "Crustáceos" },
   { categoria: "molusco", titulo: "Moluscos" },
 ]
 

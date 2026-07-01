@@ -38,7 +38,8 @@ export type Categoria =
   | "ave"
   | "mamifero"
   | "reptil"
-  | "molusco";
+  | "molusco"
+  | "crustaceo";
 
 export type GrupoPez = "Residentes" | "Visitantes frecuentes" | "Visitas ocasionales";
 
@@ -421,35 +422,253 @@ export const peces: Especie[] = [
   },
 ];
 
-const FUENTE_ECOPARQUE = "Ecoparque Ciénaga de Mallorquín";
+const FUENTE_ECOPARQUE = "Ecoparque Ciénaga de Mallorquín · barranquillaverde.gov.co";
+const FUENTE_EBIRD = "eBird – Cornell Lab / pajarear.co · hotspot L1144854";
 
-// Lista reducida a propósito: de las especies que cita el ecoparque (sin estudio
-// académico de respaldo), estas son las más esperables en un manglar/estuario del
-// Caribe colombiano y con menor riesgo de ser un error o una exageración del listado
-// original. El resto se deja por fuera hasta tener fuente y foto propias confirmadas.
 export const faunaDestacada: Especie[] = [
+  // ── AVES ─────────────────────────────────────────────────────────────────
+  {
+    nombre: "Garceta grande",
+    cientifico: "Ardea alba",
+    categoria: "ave",
+    estado: "Residente frecuente",
+    descripcion:
+      "La garza más visible de la ciénaga: aparece en el 80 % de los avistamientos registrados en eBird. Caza inmóvil en aguas someras con una explosiva estocada del cuello, y es uno de los mejores sujetos fotográficos del recorrido.",
+    datos: [
+      { etiqueta: "Familia", valor: "Ardeidae" },
+      { etiqueta: "Avistamientos", valor: "80 % listas eBird" },
+      { etiqueta: "Hábitat", valor: "Orillas y zonas someras" },
+      { etiqueta: "Alimentación", valor: "Peces y crustáceos" },
+    ],
+    fuente: FUENTE_EBIRD,
+  },
+  {
+    nombre: "Garceta nívea",
+    cientifico: "Egretta thula",
+    categoria: "ave",
+    estado: "Residente frecuente",
+    descripcion:
+      "Garza blanca de patas negras con pies amarillos brillantes —su marca de campo—. Revuelve el fango con los pies para espantar presas y las atrapa con relámpagos del pico. Segunda especie más avistada con el 77.5 % de las listas.",
+    datos: [
+      { etiqueta: "Familia", valor: "Ardeidae" },
+      { etiqueta: "Avistamientos", valor: "77.5 % listas eBird" },
+      { etiqueta: "Hábitat", valor: "Marismas, playas y lagunas" },
+      { etiqueta: "Alimentación", valor: "Peces, camarones e insectos" },
+    ],
+    fuente: FUENTE_EBIRD,
+  },
+  {
+    nombre: "Pelícano pardo",
+    cientifico: "Pelecanus occidentalis",
+    categoria: "ave",
+    estado: "Residente frecuente",
+    descripcion:
+      "Ícono del litoral caribeño: pesca en picado desde varios metros de altura, hundiéndose con las alas plegadas y atrapando peces en su bolsa gular elástica. Presente en el 70 % de las listas de eBird en la ciénaga.",
+    datos: [
+      { etiqueta: "Familia", valor: "Pelecanidae" },
+      { etiqueta: "Avistamientos", valor: "70 % listas eBird" },
+      { etiqueta: "Hábitat", valor: "Costas y lagunas abiertas" },
+      { etiqueta: "Alimentación", valor: "Peces" },
+    ],
+    fuente: FUENTE_EBIRD,
+  },
   {
     nombre: "Cormorán neotropical",
     cientifico: "Nannopterum brasilianum",
     categoria: "ave",
-    descripcion: "Una de las 155 especies de aves registradas en la ciénaga.",
-    datos: [],
+    estado: "Residente frecuente",
+    descripcion:
+      "Se posa con las alas abiertas sobre troncos emergidos para secar su plumaje: no tiene glándulas impermeabilizantes y el agua empapa sus plumas. Buceador ágil, alcanza el 67.5 % de aparición en eBird.",
+    datos: [
+      { etiqueta: "Familia", valor: "Phalacrocoracidae" },
+      { etiqueta: "Avistamientos", valor: "67.5 % listas eBird" },
+      { etiqueta: "Hábitat", valor: "Lagos, ríos y lagunas costeras" },
+      { etiqueta: "Alimentación", valor: "Peces" },
+    ],
+    fuente: FUENTE_EBIRD,
+  },
+  {
+    nombre: "Martín pescador grande",
+    cientifico: "Megaceryle torquata",
+    categoria: "ave",
+    estado: "Residente",
+    descripcion:
+      "El más grande y vistoso de los martines pescadores del Caribe. Vigila desde una rama sobre el agua y se lanza en picado con precisión quirúrgica. El macho tiene el pecho rufo; la hembra añade una banda azul.",
+    datos: [
+      { etiqueta: "Familia", valor: "Alcedinidae" },
+      { etiqueta: "Avistamientos", valor: "62.5 % listas eBird" },
+      { etiqueta: "Hábitat", valor: "Orillas arboladas de aguas claras" },
+      { etiqueta: "Alimentación", valor: "Peces" },
+    ],
+    fuente: FUENTE_EBIRD,
+  },
+  {
+    nombre: "Fragata magnífica",
+    cientifico: "Fregata magnificens",
+    categoria: "ave",
+    estado: "Visitante costero",
+    descripcion:
+      "Ave de largas alas en «W» que planea sin esfuerzo durante horas. Experta en robar presas a otras aves en vuelo (cleptoparásita). En temporada de cría el macho infla una bolsa gular de color rojo intenso.",
+    datos: [
+      { etiqueta: "Familia", valor: "Fregatidae" },
+      { etiqueta: "Avistamientos", valor: "52.5 % listas eBird" },
+      { etiqueta: "Hábitat", valor: "Zonas costeras e islas" },
+      { etiqueta: "Alimentación", valor: "Peces y calamares" },
+    ],
+    fuente: FUENTE_EBIRD,
+  },
+  {
+    nombre: "Flamenco rosado",
+    cientifico: "Phoenicopterus ruber",
+    categoria: "ave",
+    estado: "Visitante ocasional",
+    descripcion:
+      "El más colorido visitante de la ciénaga. Su color rosa proviene de los carotenoides de los crustáceos y algas que filtra con su peculiar pico curvado. Se avista en grupos en épocas secas, cuando migra por la costa caribeña.",
+    datos: [
+      { etiqueta: "Familia", valor: "Phoenicopteridae" },
+      { etiqueta: "Hábitat", valor: "Lagunas costeras y estuarios" },
+      { etiqueta: "Alimentación", valor: "Filtradora (algas y crustáceos)" },
+      { etiqueta: "Estado IUCN", valor: "Preocupación menor (LC)" },
+    ],
     fuente: FUENTE_ECOPARQUE,
   },
+  {
+    nombre: "Águila pescadora",
+    cientifico: "Pandion haliaetus",
+    categoria: "ave",
+    estado: "Migratorio",
+    descripcion:
+      "Rapaz migratoria que visita la ciénaga desde Norteamérica entre octubre y marzo. Especializada en capturar peces: sus dedos exteriores reversibles y garras largas le permiten asir presas resbaladizas justo bajo la superficie.",
+    datos: [
+      { etiqueta: "Familia", valor: "Pandionidae" },
+      { etiqueta: "Hábitat", valor: "Lagunas costeras y ríos" },
+      { etiqueta: "Alimentación", valor: "Peces" },
+      { etiqueta: "Época", valor: "Oct – Mar (migratoria)" },
+    ],
+    fuente: FUENTE_ECOPARQUE,
+  },
+  // ── MAMÍFEROS ────────────────────────────────────────────────────────────
+  {
+    nombre: "Nutria neotropical",
+    cientifico: "Lontra longicaudis",
+    categoria: "mamifero",
+    estado: "Amenazada localmente",
+    descripcion:
+      "Uno de los mamíferos más carismáticos de los manglares. Nada con agilidad y captura peces y cangrejos. Su presencia indica buena calidad del agua; la contaminación y la caza la han reducido en gran parte de su área histórica.",
+    datos: [
+      { etiqueta: "Familia", valor: "Mustelidae" },
+      { etiqueta: "Hábitat", valor: "Canales y orillas de agua salobre" },
+      { etiqueta: "Alimentación", valor: "Peces y crustáceos" },
+      { etiqueta: "Estado IUCN", valor: "Datos insuficientes (DD)" },
+    ],
+    fuente: FUENTE_ECOPARQUE,
+  },
+  {
+    nombre: "Mapache cangrejero",
+    cientifico: "Procyon cancrivorus",
+    categoria: "mamifero",
+    estado: "Residente",
+    descripcion:
+      "Pariente del mapache común adaptado a manglares y riberas. Busca cangrejos, moluscos y peces explorando el fango con sus ágiles manos. Activo principalmente de noche, es raro observarlo durante el recorrido diurno.",
+    datos: [
+      { etiqueta: "Familia", valor: "Procyonidae" },
+      { etiqueta: "Hábitat", valor: "Manglares y zonas riparias" },
+      { etiqueta: "Alimentación", valor: "Cangrejos, moluscos, peces" },
+      { etiqueta: "Hábitos", valor: "Nocturno" },
+    ],
+    fuente: FUENTE_ECOPARQUE,
+  },
+  // ── REPTILES ─────────────────────────────────────────────────────────────
   {
     nombre: "Babilla",
     cientifico: "Caiman crocodilus fuscus",
     categoria: "reptil",
-    descripcion: "Reptil registrado en los canales de la ciénaga.",
-    datos: [],
+    estado: "Residente",
+    descripcion:
+      "Cocodrilo pequeño que habita canales y zonas tranquilas de la ciénaga. Regula la población de peces y contribuye a la salud del ecosistema. A pesar de su apariencia temible es relativamente tímido con los humanos.",
+    datos: [
+      { etiqueta: "Familia", valor: "Alligatoridae" },
+      { etiqueta: "Longitud", valor: "Hasta 2 m" },
+      { etiqueta: "Hábitat", valor: "Canales y lagunas someras" },
+      { etiqueta: "Alimentación", valor: "Peces, anfibios y pequeños mamíferos" },
+    ],
     fuente: FUENTE_ECOPARQUE,
   },
   {
     nombre: "Iguana verde",
     cientifico: "Iguana iguana",
     categoria: "reptil",
-    descripcion: "Reptil registrado en el área del ecoparque.",
-    datos: [],
+    estado: "Residente",
+    descripcion:
+      "Reptil herbívoro que reposa en las ramas de los manglares calentándose al sol. Las crías son verde brillante; los adultos se tornan más grises con tonos anaranjados. Excelente nadadora: se lanza al agua cuando se siente amenazada.",
+    datos: [
+      { etiqueta: "Familia", valor: "Iguanidae" },
+      { etiqueta: "Longitud", valor: "Hasta 2 m (cola incluida)" },
+      { etiqueta: "Hábitat", valor: "Copas de árboles ribereños" },
+      { etiqueta: "Alimentación", valor: "Hojas, flores y frutos" },
+    ],
+    fuente: FUENTE_ECOPARQUE,
+  },
+  {
+    nombre: "Boa",
+    cientifico: "Boa imperator",
+    categoria: "reptil",
+    estado: "Residente",
+    descripcion:
+      "La serpiente más grande del área, constrictora y no venenosa. Habita la vegetación ribereña y controla poblaciones de roedores. Su presencia es señal de un ecosistema relativamente sano. Activa al amanecer y al atardecer.",
+    datos: [
+      { etiqueta: "Familia", valor: "Boidae" },
+      { etiqueta: "Longitud", valor: "Hasta 3 m" },
+      { etiqueta: "Hábitat", valor: "Vegetación ribereña y manglar" },
+      { etiqueta: "Alimentación", valor: "Roedores, aves y lagartos" },
+    ],
+    fuente: FUENTE_ECOPARQUE,
+  },
+  // ── MOLUSCOS ─────────────────────────────────────────────────────────────
+  {
+    nombre: "Ostra del mangle",
+    cientifico: "Crassostrea rhizophorae",
+    categoria: "molusco",
+    estado: "Recurso pesquero",
+    descripcion:
+      "Se adhiere a las raíces sumergidas del mangle rojo formando racimos visibles desde el sendero. Filtra el agua de la ciénaga mejorando su calidad. Recurso tradicional de las comunidades pesqueras locales de Mallorquín.",
+    datos: [
+      { etiqueta: "Familia", valor: "Ostreidae" },
+      { etiqueta: "Hábitat", valor: "Raíces de mangle rojo" },
+      { etiqueta: "Alimentación", valor: "Filtradora (fitoplancton)" },
+      { etiqueta: "Rol", valor: "Biorremediadora y recurso pesquero" },
+    ],
+    fuente: FUENTE_ECOPARQUE,
+  },
+  // ── CRUSTÁCEOS ───────────────────────────────────────────────────────────
+  {
+    nombre: "Cangrejo rojo del mangle",
+    cientifico: "Goniopsis cruentata",
+    categoria: "crustaceo",
+    estado: "Residente",
+    descripcion:
+      "El habitante más llamativo de las raíces del manglar: trepador ágil de caparazón rojo intenso con patas moteadas. Se le ve escabullirse por los zancos del mangle rojo durante el recorrido y es uno de los primeros animales que notan los visitantes.",
+    datos: [
+      { etiqueta: "Familia", valor: "Grapsidae" },
+      { etiqueta: "Hábitat", valor: "Raíces y troncos del mangle rojo" },
+      { etiqueta: "Alimentación", valor: "Detritos, algas y materia orgánica" },
+      { etiqueta: "Rol", valor: "Descomponedor y eslabón de la cadena trófica" },
+    ],
+    fuente: FUENTE_ECOPARQUE,
+  },
+  {
+    nombre: "Cangrejo azul del manglar",
+    cientifico: "Cardisoma guanhumi",
+    categoria: "crustaceo",
+    estado: "Residente",
+    descripcion:
+      "Cangrejo terrestre de gran tamaño que excava madrigueras en los bordes del manglar. El macho tiene una de sus pinzas notablemente más grande. Especie de interés pesquero artesanal para las comunidades de Mallorquín.",
+    datos: [
+      { etiqueta: "Familia", valor: "Gecarcinidae" },
+      { etiqueta: "Tamaño", valor: "Caparazón hasta 12 cm" },
+      { etiqueta: "Hábitat", valor: "Bordes terrestres del manglar" },
+      { etiqueta: "Alimentación", valor: "Hojas, frutos y detritos" },
+    ],
     fuente: FUENTE_ECOPARQUE,
   },
 ];
