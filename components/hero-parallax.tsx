@@ -14,7 +14,7 @@ interface Props {
 
 export function HeroParallax({
   src,
-  overlay = "bg-background/78",
+  overlay = "bg-background/60",
   velocidad = 0.3,
 }: Props) {
   const imgRef = useRef<HTMLDivElement>(null)
