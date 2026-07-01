@@ -34,18 +34,19 @@ export function HeroEvento() {
 
           <TicketEvento className="mt-8" />
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
               href="#inscripcion"
-              className="group inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/30"
+              className="group inline-flex w-full items-center justify-center gap-2.5 rounded-2xl bg-primary px-7 py-4 text-base font-bold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/35 active:translate-y-0 sm:w-auto"
             >
-              Inscríbete al recorrido
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+              Quiero inscribirme
+              <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </a>
             <Link
               href="/guia"
-              className="rounded-full border border-border px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+              className="group inline-flex w-full items-center justify-center gap-2.5 rounded-2xl border-2 border-primary/25 bg-secondary/70 px-7 py-4 text-base font-bold text-primary backdrop-blur-sm transition-all hover:border-primary/60 hover:bg-secondary active:scale-[0.98] sm:w-auto"
             >
+              <TreeDeciduous className="size-5 transition-transform group-hover:scale-110" aria-hidden="true" />
               Conoce la ciénaga
             </Link>
           </div>

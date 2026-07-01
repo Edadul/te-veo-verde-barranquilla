@@ -18,11 +18,15 @@ export function HeroParallax({
   velocidad = 0.3,
 }: Props) {
   const imgRef = useRef<HTMLDivElement>(null)
-  const imagen = src ?? withBasePath("/galeria/hereocie.avif")
+  const imagen = src ?? withBasePath("/hero/hereocie.avif")
 
   useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
-    if (mq.matches) return
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
+    // En móvil/touch el scroll corre en el compositor y los eventos JS llegan
+    // en ráfagas, causando lag visible. Se desactiva el parallax y la imagen
+    // queda fija centrada, que se ve igual de bien en pantallas pequeñas.
+    const touchDevice = window.matchMedia("(pointer: coarse)")
+    if (reducedMotion.matches || touchDevice.matches) return
 
     const el = imgRef.current
     if (!el) return
@@ -31,15 +35,13 @@ export function HeroParallax({
 
     function update() {
       if (!el) return
-      // Calcula offset relativo al viewport: cuando el centro de la sección
-      // coincide con el centro del viewport, el offset es 0 (imagen centrada).
-      // Funciona tanto para secciones al tope como en cualquier punto de la página.
       const wrapper = el.parentElement
       if (!wrapper) return
       const rect = wrapper.getBoundingClientRect()
       const elemCenter = rect.top + rect.height / 2
       const viewCenter = window.innerHeight / 2
-      el.style.transform = `translateY(${(elemCenter - viewCenter) * velocidad}px)`
+      // translate3d activa la composición en GPU para mayor fluidez
+      el.style.transform = `translate3d(0, ${(elemCenter - viewCenter) * velocidad}px, 0)`
     }
 
     function onScroll() {
@@ -47,7 +49,7 @@ export function HeroParallax({
       raf = requestAnimationFrame(update)
     }
 
-    update() // posición inicial antes del primer scroll
+    update()
     window.addEventListener("scroll", onScroll, { passive: true })
     return () => {
       window.removeEventListener("scroll", onScroll)
