@@ -22,11 +22,7 @@ export function HeroParallax({
 
   useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
-    // En móvil/touch el scroll corre en el compositor y los eventos JS llegan
-    // en ráfagas, causando lag visible. Se desactiva el parallax y la imagen
-    // queda fija centrada, que se ve igual de bien en pantallas pequeñas.
-    const touchDevice = window.matchMedia("(pointer: coarse)")
-    if (reducedMotion.matches || touchDevice.matches) return
+    if (reducedMotion.matches) return
 
     const el = imgRef.current
     if (!el) return
@@ -67,6 +63,7 @@ export function HeroParallax({
           backgroundSize: "cover",
           backgroundPosition: "center top",
           willChange: "transform",
+          transition: "transform 80ms linear",
         }}
       />
       <div className={`absolute inset-0 ${overlay}`} />
