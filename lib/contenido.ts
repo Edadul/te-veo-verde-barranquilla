@@ -137,6 +137,7 @@ export const peces: Especie[] = [
     nombre: "Lisa",
     cientifico: "Mugil incilis",
     categoria: "pez",
+    imagen: "/guia/lisa.webp",
     grupo: "Residentes",
     estado: "Dominante",
     descripcion:
@@ -154,6 +155,7 @@ export const peces: Especie[] = [
     nombre: "Anchoa filtrador",
     cientifico: "Cetengraulis edentulus",
     categoria: "pez",
+    imagen: "/guia/anchoa-filtrador.webp",
     grupo: "Residentes",
     estado: "Dominante",
     descripcion:
@@ -171,6 +173,7 @@ export const peces: Especie[] = [
     nombre: "Mojarra rayada",
     cientifico: "Diapterus rhombeus",
     categoria: "pez",
+    imagen: "/guia/mojarra-rayada.webp",
     grupo: "Residentes",
     estado: "Dominante",
     descripcion:
@@ -187,6 +190,7 @@ export const peces: Especie[] = [
     nombre: "Mojarra blanca",
     cientifico: "Eugerres plumieri",
     categoria: "pez",
+    imagen: "/guia/mojarra-blanca.webp",
     grupo: "Residentes",
     estado: "Dominante",
     descripcion:
@@ -204,6 +208,7 @@ export const peces: Especie[] = [
     nombre: "Chivo mapalé",
     cientifico: "Cathorops spixii",
     categoria: "pez",
+    imagen: "/guia/chivo-mapale.webp",
     grupo: "Residentes",
     estado: "Residente",
     descripcion:
@@ -220,6 +225,7 @@ export const peces: Especie[] = [
     nombre: "Sábalo",
     cientifico: "Arius bonillai",
     categoria: "pez",
+    imagen: "/guia/sabalo.webp",
     grupo: "Residentes",
     estado: "Residente",
     descripcion:
@@ -236,6 +242,7 @@ export const peces: Especie[] = [
     nombre: "Lisa grande",
     cientifico: "Mugil liza",
     categoria: "pez",
+    imagen: "/guia/lisa-grande.webp",
     grupo: "Residentes",
     estado: "Residente",
     descripcion:
@@ -252,6 +259,7 @@ export const peces: Especie[] = [
     nombre: "Jurel",
     cientifico: "Carangidae spp.",
     categoria: "pez",
+    imagen: "/guia/jurel.webp",
     grupo: "Visitantes frecuentes",
     estado: "Visitante frecuente",
     descripcion:
@@ -268,6 +276,7 @@ export const peces: Especie[] = [
     nombre: "Bagres marinos",
     cientifico: "Ariidae spp.",
     categoria: "pez",
+    imagen: "/guia/bagre-marino.webp",
     grupo: "Visitantes frecuentes",
     estado: "Visitante frecuente",
     descripcion:
@@ -284,6 +293,7 @@ export const peces: Especie[] = [
     nombre: "Corvinas",
     cientifico: "Sciaenidae spp.",
     categoria: "pez",
+    imagen: "/guia/corvina.webp",
     grupo: "Visitantes frecuentes",
     estado: "Visitante frecuente",
     descripcion:
@@ -300,6 +310,7 @@ export const peces: Especie[] = [
     nombre: "Mojarra (Gerreido)",
     cientifico: "Gerreidae spp.",
     categoria: "pez",
+    imagen: "/guia/mojarra.webp",
     grupo: "Visitantes frecuentes",
     estado: "Visitante frecuente",
     descripcion:
@@ -316,6 +327,7 @@ export const peces: Especie[] = [
     nombre: "Róbalo",
     cientifico: "Centropomus ensiferus",
     categoria: "pez",
+    imagen: "/guia/robalo.webp",
     grupo: "Visitas ocasionales",
     estado: "Visitante ocasional",
     descripcion:
@@ -331,6 +343,7 @@ export const peces: Especie[] = [
     nombre: "Dormilón manchado",
     cientifico: "Dormitator maculatus",
     categoria: "pez",
+    imagen: "/guia/dormilon-manchado.webp",
     grupo: "Visitas ocasionales",
     estado: "Visitante ocasional",
     descripcion:
@@ -346,6 +359,7 @@ export const peces: Especie[] = [
     nombre: "Gobio banana",
     cientifico: "Awaous banana",
     categoria: "pez",
+    imagen: "/guia/gobio-banana.webp",
     grupo: "Visitas ocasionales",
     estado: "Visitante ocasional",
     descripcion:
@@ -361,6 +375,7 @@ export const peces: Especie[] = [
     nombre: "Eleotris",
     cientifico: "Eleotris pisonis",
     categoria: "pez",
+    imagen: "/guia/eleotris.webp",
     grupo: "Visitas ocasionales",
     estado: "Visitante ocasional",
     descripcion:
@@ -376,6 +391,7 @@ export const peces: Especie[] = [
     nombre: "Guppy",
     cientifico: "Poecilia sphenops",
     categoria: "pez",
+    imagen: "/guia/guppy.webp",
     grupo: "Visitas ocasionales",
     estado: "Visitante ocasional",
     descripcion:
@@ -391,6 +407,7 @@ export const peces: Especie[] = [
     nombre: "Gobio estuarino",
     cientifico: "Gobionellus boleosoma",
     categoria: "pez",
+    imagen: "/guia/gobio-estaurino.webp",
     grupo: "Visitas ocasionales",
     estado: "Visitante ocasional",
     descripcion:
