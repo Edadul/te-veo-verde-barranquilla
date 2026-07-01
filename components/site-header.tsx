@@ -14,13 +14,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
         <Link href="/#inicio" className="flex items-center gap-2.5">
-          <span className="relative size-10 overflow-hidden rounded-full">
+          <span className="relative size-12 overflow-hidden rounded-full">
             <Image
               src={withBasePath("/logo.png")}
               alt="Barranquilla Verde Fotografía"
               fill
-              sizes="40px"
-              className="object-cover"
+              sizes="48px"
+              className="scale-[1.18] object-cover"
             />
           </span>
           <span className="font-heading text-lg leading-none tracking-wide text-primary">
