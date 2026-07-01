@@ -438,6 +438,10 @@ export const faunaDestacada: Especie[] = [
 ];
 
 export const galeria = [
+  {
+    src: "/galeria/hereocie.avif",
+    alt: "Vista aérea de los manglares y el sendero elevado de la Ciénaga de Mallorquín",
+  },
   { src: "/galeria/sendero.webp", alt: "Sendero de madera entre los manglares" },
   { src: "/galeria/aves.webp", alt: "Garza en la ciénaga" },
   {

@@ -8,10 +8,12 @@ import { TicketEvento } from "@/components/ticket-evento"
 import { CompartirEvento } from "@/components/compartir-evento"
 import { FaunaFlotante } from "@/components/decor/fauna-flotante"
 import { TituloOnda } from "@/components/titulo-onda"
+import { HeroParallax } from "@/components/hero-parallax"
 
 export function HeroEvento() {
   return (
     <section id="inicio" className="relative overflow-hidden">
+      <HeroParallax />
       <FaunaFlotante variante="mixto" />
       <div className="relative z-10 mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 md:grid-cols-2 md:px-6 md:py-20">
         {/* Texto */}

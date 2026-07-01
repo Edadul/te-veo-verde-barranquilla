@@ -1,13 +1,20 @@
 import { ArrowRight, TreeDeciduous } from "lucide-react";
 import { FORM_INSCRIPCION_URL } from "@/lib/contenido";
+import { HeroParallax } from "@/components/hero-parallax";
+import { withBasePath } from "@/lib/utils";
 
 export function Inscripcion() {
   return (
     <section
       id="inscripcion"
-      className="scroll-mt-20 bg-primary py-16 text-primary-foreground md:py-24"
+      className="relative scroll-mt-20 overflow-hidden bg-primary py-16 text-primary-foreground md:py-24"
     >
-      <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
+      <HeroParallax
+        src={withBasePath("/galeria/manglar.jpg")}
+        overlay="bg-primary/88"
+        velocidad={0.2}
+      />
+      <div className="relative z-10 mx-auto max-w-3xl px-4 text-center md:px-6">
         <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-3 py-1 text-xs font-semibold uppercase tracking-widest">
           <TreeDeciduous className="size-4" aria-hidden="true" />
           Adopta un árbol

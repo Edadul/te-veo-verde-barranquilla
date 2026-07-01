@@ -7,6 +7,8 @@ import { EspecieCard } from "@/components/especie-card"
 import { FaunaFlotante } from "@/components/decor/fauna-flotante"
 import { EtiquetaSeccion } from "@/components/etiqueta-seccion"
 import { MapaRecorrido } from "@/components/mapa-recorrido"
+import { HeroParallax } from "@/components/hero-parallax"
+import { withBasePath } from "@/lib/utils"
 import {
   arboles,
   peces,
@@ -42,7 +44,12 @@ export default function GuiaPage() {
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <main>
-        <section className="relative overflow-hidden border-b border-border bg-secondary/40 py-14 md:py-20">
+        <section className="relative overflow-hidden border-b border-border py-14 md:py-20">
+          <HeroParallax
+            src={withBasePath("/galeria/hereoguia.jpg")}
+            overlay="bg-background/82"
+            velocidad={0.25}
+          />
           <FaunaFlotante variante="mixto" />
           <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
             <Link
