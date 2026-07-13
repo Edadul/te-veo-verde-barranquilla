@@ -762,6 +762,16 @@ export const galeriaEvento: Foto[] = [
   { src: "/galeria/evento-10.webp", alt: "Manglar y aguas salobres de la ciénaga" },
   { src: "/galeria/evento-11.webp", alt: "Momento del recorrido Te Veo Verde - Barranquilla 2026" },
   { src: "/galeria/evento-12.webp", alt: "Ciénaga de Mallorquín al amanecer durante el evento" },
+  { src: "/galeria/evento-13.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-14.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-15.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-16.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-17.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-18.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-19.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-20.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-21.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-22.webp", alt: "Fotografía del recorrido Te Veo Verde Barranquilla" },
 ];
 
 export const galeriaReferencia: Foto[] = [
