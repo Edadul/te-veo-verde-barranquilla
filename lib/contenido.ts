@@ -430,6 +430,7 @@ export const peces: Especie[] = [
 
 const FUENTE_ECOPARQUE = "Ecoparque Ciénaga de Mallorquín · barranquillaverde.gov.co";
 const FUENTE_EBIRD = "eBird – Cornell Lab / pajarear.co · hotspot L1144854";
+const FUENTE_WIKI = "Wikipedia – es.wikipedia.org";
 
 export const faunaDestacada: Especie[] = [
   // ── AVES ─────────────────────────────────────────────────────────────────
@@ -560,6 +561,57 @@ export const faunaDestacada: Especie[] = [
       { etiqueta: "Época", valor: "Oct – Mar (migratoria)" },
     ],
     fuente: FUENTE_ECOPARQUE,
+  },
+  {
+    nombre: "Ibis blanco",
+    cientifico: "Eudocimus albus",
+    categoria: "ave",
+    imagen: "/guia/ibis.webp",
+    estado: "Residente frecuente",
+    descripcion:
+      "Ave de plumaje completamente blanco con pico largo y curvado de color rojo coral. Busca cangrejos y crustáceos sondeando el fango con el pico. Vuela en formación con las alas extendidas mostrando las puntas negras, y anida en colonias ruidosas sobre los manglares.",
+    datos: [
+      { etiqueta: "Familia", valor: "Threskiornithidae" },
+      { etiqueta: "Longitud", valor: "56–71 cm" },
+      { etiqueta: "Hábitat", valor: "Marismas, manglares y humedales" },
+      { etiqueta: "Alimentación", valor: "Cangrejos, crustáceos e insectos acuáticos" },
+      { etiqueta: "Estado IUCN", valor: "Preocupación menor (LC)" },
+    ],
+    fuente: FUENTE_WIKI,
+  },
+  {
+    nombre: "María mulata",
+    cientifico: "Quiscalus mexicanus",
+    categoria: "ave",
+    imagen: "/guia/maria_mulata.webp",
+    estado: "Residente",
+    descripcion:
+      "El macho es negro con brillo iridiscente y lleva una cola casi tan larga como su cuerpo; la hembra es más pequeña y de color pardo. Omnívora y oportunista, muy visible en los bordes del manglar. En la costa Caribe colombiana se le conoce popularmente como «María mulata».",
+    datos: [
+      { etiqueta: "Familia", valor: "Icteridae" },
+      { etiqueta: "Longitud", valor: "Macho 43 cm · Hembra 33 cm" },
+      { etiqueta: "Avistamientos", valor: "65 % listas eBird Mallorquín" },
+      { etiqueta: "Alimentación", valor: "Omnívora (insectos, frutos, carroña)" },
+      { etiqueta: "Estado IUCN", valor: "Preocupación menor (LC)" },
+    ],
+    fuente: `${FUENTE_WIKI} · ${FUENTE_EBIRD}`,
+  },
+  {
+    nombre: "Carpintero habado",
+    cientifico: "Melanerpes rubricapillus",
+    categoria: "ave",
+    imagen: "/guia/carpintero.webp",
+    estado: "Residente",
+    descripcion:
+      "El carpintero más común del Caribe colombiano. El macho luce corona roja brillante y espalda barrada en blanco y negro —semejante a una cebra—; la hembra tiene solo un toque rojo en la nuca. Perfectamente adaptado a manglares y bordes de bosque; picotea troncos en busca de insectos y también come frutos y néctar.",
+    datos: [
+      { etiqueta: "Familia", valor: "Picidae" },
+      { etiqueta: "Longitud", valor: "16–18.5 cm" },
+      { etiqueta: "Hábitat", valor: "Bordes de bosque, manglares y jardines" },
+      { etiqueta: "Alimentación", valor: "Insectos, larvas, frutos y néctar" },
+      { etiqueta: "Estado IUCN", valor: "Preocupación menor (LC)" },
+    ],
+    fuente: FUENTE_WIKI,
   },
   // ── MAMÍFEROS ────────────────────────────────────────────────────────────
   {
