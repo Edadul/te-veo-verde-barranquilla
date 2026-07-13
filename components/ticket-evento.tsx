@@ -2,8 +2,7 @@ import { CalendarioAnimado } from "@/components/decor/calendario-animado"
 import { RelojAnimado } from "@/components/decor/reloj-animado"
 import { PinAnimado } from "@/components/decor/pin-animado"
 import { HojaAnimada } from "@/components/decor/hoja-animada"
-import { evento, calendario } from "@/lib/contenido"
-import { withBasePath } from "@/lib/utils"
+import { evento } from "@/lib/contenido"
 
 export function TicketEvento({ className = "" }: { className?: string }) {
   return (
@@ -57,24 +56,9 @@ export function TicketEvento({ className = "" }: { className?: string }) {
           </div>
           <p className="mt-1 font-heading text-xl text-foreground">{evento.lugar}</p>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            <a
-              href={calendario.googleUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-            >
-              <CalendarioAnimado size={14} />
-              Agregar al calendario
-            </a>
-            <a
-              href={withBasePath(calendario.icsPath)}
-              download
-              className="inline-flex items-center rounded-full border border-border px-4 py-2 text-xs font-semibold text-foreground transition-colors hover:bg-secondary"
-            >
-              Descargar .ics
-            </a>
-          </div>
+          <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-primary">
+            Evento realizado
+          </p>
         </div>
       </div>
     </div>

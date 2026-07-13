@@ -32,6 +32,12 @@ export const evento = {
     "Una mañana para reconectar con la naturaleza: caminaremos por los senderos de la Ciénaga de Mallorquín, fotografiaremos sus manglares y aprenderemos a cuidarlos. Cada participante podrá adoptar un árbol del manglar y darle seguimiento.",
 };
 
+export const resultadosEvento = {
+  participantes: 13,
+  guias: 1,
+  fecha: "03 de julio de 2026",
+};
+
 export type Categoria =
   | "arbol"
   | "pez"
@@ -689,23 +695,31 @@ export const faunaDestacada: Especie[] = [
   },
 ];
 
-export const galeria = [
+export type Foto = { src: string; alt: string };
+
+export const galeriaEvento: Foto[] = [
+  { src: "/galeria/evento-01.webp", alt: "Participantes en el recorrido por los senderos de la Ciénaga de Mallorquín" },
+  { src: "/galeria/evento-02.webp", alt: "Manglar durante el recorrido fotográfico Te Veo Verde Barranquilla" },
+  { src: "/galeria/evento-03.webp", alt: "Vista del manglar desde el sendero elevado" },
+  { src: "/galeria/evento-04.webp", alt: "Raíces del mangle rojo en la Ciénaga de Mallorquín" },
+  { src: "/galeria/evento-05.webp", alt: "Participantes fotografiando el ecosistema de manglar" },
+  { src: "/galeria/evento-06.webp", alt: "Ciénaga de Mallorquín durante el recorrido del 03 de julio" },
+  { src: "/galeria/evento-07.webp", alt: "Sendero entre los manglares de la ciénaga" },
+  { src: "/galeria/evento-08.webp", alt: "Fauna avistada durante el recorrido fotográfico" },
+  { src: "/galeria/evento-09.webp", alt: "Grupo explorando el ecoparque Ciénaga de Mallorquín" },
+  { src: "/galeria/evento-10.webp", alt: "Manglar y aguas salobres de la ciénaga" },
+  { src: "/galeria/evento-11.webp", alt: "Momento del recorrido Te Veo Verde - Barranquilla 2026" },
+  { src: "/galeria/evento-12.webp", alt: "Ciénaga de Mallorquín al amanecer durante el evento" },
+];
+
+export const galeriaReferencia: Foto[] = [
   { src: "/galeria/sendero.webp", alt: "Sendero de madera entre los manglares" },
   { src: "/galeria/aves.webp", alt: "Garza en la ciénaga" },
-  {
-    src: "/galeria/atardecer.webp",
-    alt: "Atardecer sobre la Ciénaga de Mallorquín",
-  },
-  {
-    src: "/galeria/raices.webp",
-    alt: "Raíces del mangle rojo reflejadas en el agua",
-  },
-  {
-    src: "/galeria/visitantes.webp",
-    alt: "Grupo de visitantes en el sendero elevado del manglar",
-  },
-  {
-    src: "/galeria/plantula.webp",
-    alt: "Plántula de mangle lista para sembrar",
-  },
+  { src: "/galeria/atardecer.webp", alt: "Atardecer sobre la Ciénaga de Mallorquín" },
+  { src: "/galeria/raices.webp", alt: "Raíces del mangle rojo reflejadas en el agua" },
+  { src: "/galeria/visitantes.webp", alt: "Grupo de visitantes en el sendero elevado del manglar" },
+  { src: "/galeria/plantula.webp", alt: "Plántula de mangle lista para sembrar" },
 ];
+
+// mantiene compatibilidad si algo más importa `galeria`
+export const galeria = galeriaReferencia;

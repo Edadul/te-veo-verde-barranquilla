@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Camera, TreeDeciduous } from "lucide-react"
-import { evento } from "@/lib/contenido"
+import { Camera, Images, TreeDeciduous } from "lucide-react"
+import { evento, resultadosEvento } from "@/lib/contenido"
 import { withBasePath } from "@/lib/utils"
 import { HojaAnimada } from "@/components/decor/hoja-animada"
 import { TicketEvento } from "@/components/ticket-evento"
@@ -34,13 +34,18 @@ export function HeroEvento() {
 
           <TicketEvento className="mt-8" />
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+            <Camera className="size-4" aria-hidden="true" />
+            {resultadosEvento.participantes} participantes · {resultadosEvento.guias} guía · {resultadosEvento.fecha}
+          </div>
+
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <a
-              href="#inscripcion"
+              href="#galeria"
               className="group inline-flex w-full items-center justify-center gap-2.5 rounded-2xl bg-primary px-7 py-4 text-base font-bold text-primary-foreground shadow-lg shadow-primary/30 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-primary/35 active:translate-y-0 sm:w-auto"
             >
-              Quiero inscribirme
-              <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+              <Images className="size-5" aria-hidden="true" />
+              Ver galería de fotos
             </a>
             <Link
               href="/guia"
@@ -49,17 +54,6 @@ export function HeroEvento() {
               <TreeDeciduous className="size-5 transition-transform group-hover:scale-110" aria-hidden="true" />
               Conoce la ciénaga
             </Link>
-          </div>
-
-          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            <span className="inline-flex items-center gap-2">
-              <Camera className="size-4 text-primary" aria-hidden="true" />
-              Trae tu cámara o celular
-            </span>
-            <span className="inline-flex items-center gap-2">
-              <TreeDeciduous className="size-4 text-primary" aria-hidden="true" />
-              Adopta un árbol del manglar
-            </span>
           </div>
 
         </div>
